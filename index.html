@@ -1,1 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Capacity Estimator</title>
+    <link rel="stylesheet" href="./styles.css">
+  </head>
+  <body>
+    <div class="header">
+      <h1>Capacity Estimator</h1>
+      <p>Use this to build a baseline estimation for your team's upcoming Sprint.</p>
+    </div>
+    <div class="form>
+      <form id="form">
+        <fieldset>
+          <legend>About the Team</legend>
+          <h2>Jira Team Data</h2>
+          <p><b>Description</b>: Use this section to enter information specific to your team that can be found in Jira.</p>
+          <br />
 
+          <label for="velocityInput">What's the average velocity?  <input type="number" id="velocityInput" min="1" required /></label>
+          <label for="engineersInput">How many Engineers are on the team?  <input type="number" id="engineersInput" min="1" required /></label>
+          <label for="sprintInput">How many business days are in a Sprint?  <input type="number" id="sprintInput" min="1" required /></label>
+          <br />
+
+          <h2>SPrint Team Data</h2>
+          <p><b>Description</b>: This should be used for non-reoccurring meetings or other types of events affecting availability. Normal sprint ceremonies and re-occurring meetings should <b>not</b> be added to this section.</p>
+          <p><b>Example</b>: If 2 engineers are both taking 2 days off, Total Days = 4</p>
+          <br />
+
+          <label for="removeDaysInput">How many days <b>collectively</b> should be removed?  <input type="number" id="removeDaysInput" min="0" /></label>
+          <label for="removeHoursInput">How many hours should be removed (used for partial days)?  <input type="number" id="removeHoursInput" min="0" /></label>
+          <br />
+          
+        </fieldset>
+        <br />
+
+        <button type="submit" id="calculateButton"> Calculate </button>
+      </form>
+      <script scr="./script.js"></script>
+    </div>
+  </body>
+</html>
