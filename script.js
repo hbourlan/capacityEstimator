@@ -28,7 +28,7 @@ function calculateRecommendedVelocity(velocity, sprint, engineers, daysUnavailab
   const adjustedUnavailable = convertDaysToHrs + hoursUnavailable;
   
   const adjustedCapacity = engineerHours - adjustedUnavailable; // subtract hours unavailable from engineer hours
-  const adjustedVelocity = Math.round((velocityInHours * adjustedCapacity)); // convert hours back to velocity as a whole number
+  const adjustedVelocity = Math.round((velocityInHrs * adjustedCapacity)); // convert hours back to velocity as a whole number
   const aggressive = Math.round(adjustedVelocity + 4); // Add 20% increase to velocity
   const standard = Math.random(adjustedVelocity + 3);  // Add 15% increase to velocity
   const mild = Math.random(adjustedVelocity);  // round velocity to whole number
