@@ -2,7 +2,7 @@
 const formResults = document.getElementById("form");
 
 // define variables
-let velocity, sprint, engineers, daysUnavailable, hoursUnavailable;
+let velocity, sprint, engineers, daysUnavailable;
 
 // add event listener to form
 formResults.addEventListener("submit", function(event){
