@@ -13,9 +13,8 @@ formResults.addEventListener("submit", function(event){
   sprint = document.getElementById("sprintInput").value;
   engineers = document.getElementById("engineersInput").value;
   daysUnavailable = document.getElementById("removeDaysInput").value;
-  hoursUnavailable = document.getElementById("removeHoursInput").value;
 
-  calculateRecommendedVelocity(velocity, sprint, engineers, daysUnavailable, hoursUnavailable);
+  calculateRecommendedVelocity(velocity, sprint, engineers, daysUnavailable);
 });
 
 function calculateRecommendedVelocity(velocity, sprint, engineers, daysUnavailable, hoursUnavailable){
@@ -23,9 +22,8 @@ function calculateRecommendedVelocity(velocity, sprint, engineers, daysUnavailab
   const engineerHours = (sprint * 8) * engineers;  // convert sprint from days to engineering hours
   const velocityInHrs = velocity / engineerHours; // convert velocity to hourly output
 
-  // convert daysUnavailable into hours and then add to hoursUnavailable
-  const convertDaysToHrs = daysUnavailable * 8;
-  const adjustedUnavailable = convertDaysToHrs + hoursUnavailable;
+  // convert daysUnavailable into hours
+  const adjustedUnavailable = daysUnavailable * 8;
   
   const adjustedCapacity = engineerHours - adjustedUnavailable; // subtract hours unavailable from engineer hours
   const adjustedVelocity = Math.round((velocityInHrs * adjustedCapacity)); // convert hours back to velocity as a whole number
