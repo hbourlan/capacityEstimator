@@ -24,13 +24,17 @@
           <label for="sprintInput">How many business days are in a Sprint?  <input type="number" id="sprintInput" min="1" required /></label>
           <br />
 
-          <h2>Capacity to Deduct</h2>
+          <h2>Capacity</h2>
           <p><b>Description</b>: This should be used for non-reoccurring meetings or other types of events affecting availability. Normal sprint ceremonies and re-occurring meetings should <b>not</b> be added to this section.</p>
-          <p><b>Example</b>:</p>
-          <p><b>Engineer 1</b>: 2 days out</p>
-          <p><b>Engineer 2</b>: 3 days out</p>
-          <p><b>Total Days to deduct</b>: 5</p>
-          <br />
+					<div id='exampleText'>
+          	<p id='exampleHeader'><b>Example</b></p>
+						<div id='exampleDetails'>
+							<p><b>Engineer 1</b>: 2 days out</p>
+							<p><b>Engineer 2</b>: 3 days out</p>
+							<p><b>Total Days to deduct</b>: 5</p>
+							<br />
+						</div>
+					</div>
 
           <label for="removeDaysInput">How many days <b>collectively</b> should be removed?  <input type="number" id="removeDaysInput" min="0" /></label
           <br />
