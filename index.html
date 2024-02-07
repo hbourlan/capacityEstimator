@@ -21,8 +21,7 @@
 
           <label for="velocityInput">What's the average velocity?  <input type="number" id="velocityInput" min="1" required /></label>
           <label for="engineersInput">How many Engineers are on the team?  <input type="number" id="engineersInput" min="1" required /></label>
-          <label for="sprintInput">How many business days are in a Sprint?  <input type="number" id="sprintInput" min="1" required /></label>
-          <br />
+            <br />
 
           <h2>Capacity</h2>
           <p><b>Description</b>: This should be used for non-reoccurring meetings or other types of events affecting availability. Normal sprint ceremonies and re-occurring meetings should <b>not</b> be added to this section.</p>
@@ -36,7 +35,8 @@
 						</div>
 					</div>
 
-          <label for="removeDaysInput">How many days <b>collectively</b> should be removed?  <input type="number" id="removeDaysInput" min="0" /></label
+          <label for="removeDaysInput">How many days <b>collectively</b> should be removed?  <input type="number" id="removeDaysInput" min="0" /></label>
+          <label for="rolloverInput">How many roll-over points should be deducted? <input type="number" id="rolloverInput" min="0" /></label>
           <br />
           
         </fieldset>
@@ -50,9 +50,9 @@
     <div id="results">
       <h2>Recommended Capacity</h2>
       <hr />
-      <p id="aggressiveCapacity"></p>
-      <p id="standardCapacity"></p>
-      <p id="mildCapacity"></p>
+      <p id="aggressive"></p>
+      <p id="standard"></p>
+      <p id="mild"></p>
     </div>
   </body>
 </html>
